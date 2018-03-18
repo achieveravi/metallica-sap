@@ -1,0 +1,17 @@
+{
+  "name": "trade-service",
+  "version": "1.0.0",
+  "description": "Trade Service REST",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ravi Mishra",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "enumify": "^1.0.4",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.9"
+  }
+}
