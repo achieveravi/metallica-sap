@@ -9,8 +9,10 @@
   "author": "Ravi Mishra",
   "license": "ISC",
   "dependencies": {
+    "amqplib": "^0.5.2",
     "body-parser": "^1.18.2",
     "enumify": "^1.0.4",
+    "eureka-js-client": "^4.4.1",
     "express": "^4.16.2",
     "mongoose": "^5.0.9"
   }

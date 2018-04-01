@@ -1,6 +1,7 @@
 const Trade = require('./models').Trade;
 const express = require('express');
 const router = express.Router();
+const publishTrade = require('./messageQ/trade-publisher');
 
 
 router.use(function timeLog(req, res, next) {
@@ -40,6 +41,8 @@ router.post('/', (req, res) => {
         if (err) return next(err);
         res.status(201);
         res.json(trade);
+        var tradeMsg = {type:'insert', trade: trade};
+        publishTrade(tradeMsg);
     });
 });
 
@@ -48,6 +51,8 @@ router.delete('/:tradeId', (req, res) => {
       req.trade.save((err, trade) => {
         if (err) return next(err);
         res.json(trade);
+        var tradeMsg = {type:'delete', trade: trade};
+        publishTrade(tradeMsg);
       });
     });
   });
