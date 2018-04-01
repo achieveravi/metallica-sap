@@ -1,0 +1,36 @@
+<form>
+  <mat-form-field class="custom">
+    <date-range-input placeholder="Trade Date"></date-range-input>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="Commodity">
+      <mat-option *ngFor="let commodity of commodities" [value]="commodity.value">
+        {{ commodity.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field class="example-medium-width">
+    <mat-select matInput name="cars" placeholder="Side" multiple >
+      <mat-option *ngFor="let car of commodities" [value]="car">
+        {{ car.viewValue }}
+      </mat-option>
+    </mat-select>
+
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="Counter Party">
+      <!-- <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{ food.viewValue }}
+        </mat-option> -->
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="Location">
+      <!-- <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+          </mat-option> -->
+    </mat-select>
+  </mat-form-field>
+  <button mat-button color="primary" type="button">Search</button>
+  <button mat-button type="button">Clear</button>
+</form>

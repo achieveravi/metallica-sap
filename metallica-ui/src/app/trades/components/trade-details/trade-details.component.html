@@ -1,0 +1,36 @@
+<form>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Commodity">
+        <mat-option *ngFor="let commodity of commodities" [value]="commodity.value">
+          {{ commodity.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="example-medium-width">
+      <mat-select matInput name="cars" placeholder="Side" multiple >
+        <mat-option *ngFor="let car of commodities" [value]="car">
+          {{ car.viewValue }}
+        </mat-option>
+      </mat-select>
+  
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Counter Party">
+        <!-- <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+          </mat-option> -->
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Location">
+        <!-- <mat-option *ngFor="let food of foods" [value]="food.value">
+              {{ food.viewValue }}
+            </mat-option> -->
+      </mat-select>
+    </mat-form-field>
+  </form>

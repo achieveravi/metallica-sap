@@ -1,0 +1,13 @@
+<div [formGroup]="parts">
+  <input matInput [matDatepicker]="fromDatePicker" formControlName="fromDate" placeholder="Choose a date">
+  <mat-datepicker-toggle matSuffix [for]="fromDatePicker">
+      <!-- <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon> -->
+  </mat-datepicker-toggle>
+  <mat-datepicker #fromDatePicker></mat-datepicker>
+  <span class="date-separator-span"> To </span>
+  <input matInput [matDatepicker]="toDatePicker" formControlName="toDate" placeholder="Choose a date">
+  <mat-datepicker-toggle matSuffix [for]="toDatePicker">
+      <!-- <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon> -->
+  </mat-datepicker-toggle>
+  <mat-datepicker #toDatePicker></mat-datepicker>
+</div>

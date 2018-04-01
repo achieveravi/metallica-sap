@@ -1,0 +1,29 @@
+div {
+    display: flex;
+    padding: 0px;
+    padding-bottom: 0px;
+  }
+
+  span {
+    opacity: 0;
+    transition: opacity 200ms;
+  }
+  :host.floating span {
+    opacity: 1;
+  }
+  input {
+    border: none;
+    background: none;
+    padding: 0;
+    outline: none;
+    font: inherit;
+    text-align: center;
+  }
+
+  .date-separator-span {
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  
